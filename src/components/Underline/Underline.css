@@ -25,7 +25,7 @@ a {
 }
 
 .fancy-underline-blue {
-    background-image: linear-gradient(120deg, rgba(93, 178, 254, 0.4) 0%, rgba(93, 178, 254, 0.4) 100%);
+    background-image: linear-gradient(120deg, rgba(123, 193, 254, 0.4) 0%, rgba(93, 178, 254, 0.4) 100%);
     background-repeat: no-repeat;
     background-position: 0 100%;
     transition: background-size 0.25s ease-in;
@@ -82,7 +82,7 @@ a {
 
 /****** Link Glitch ******/
 .link--glitch {
-    font-family: aktiv-grotesk-extended, sans-serif;
+    font-family: "SF Pro Display Semibold" !important;
     font-weight: bold;
 }
 
@@ -252,7 +252,7 @@ a {
     transition-duration: 0.3s;
 }
 
-.link--carme::before {
+.link--drawned::before {
     display: none;
 }
 
