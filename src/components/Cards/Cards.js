@@ -1,11 +1,10 @@
 import './Cards.css';
-import Highlight from 'react-highlight'
 import '../../assets/css/stackoverflow-dark.css';
 
 const Cards = () => {
     return (
         <>
-            <div className="grid-container background-grey">
+            <div className="grid-container background-grey pt-80">
 
                 <div className="col">
                     <div className="main">
@@ -18,6 +17,11 @@ const Cards = () => {
                             <div className="content"></div>
                         </div>
                     </div>
+                    <iframe scrolling="no" title="masOS Window Light" src="https://codepen.io/julianbattaglino/embed/MWGRLym?default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/julianbattaglino/pen/MWGRLym">
+                            masOS Window Light</a> by julianbattaglino (<a href="https://codepen.io/julianbattaglino">@julianbattaglino</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                    </iframe>
                 </div>
 
                 <div className="col">
@@ -31,6 +35,11 @@ const Cards = () => {
                             <div className="content"></div>
                         </div>
                     </div>
+                    <iframe scrolling="no" title="masOS Window Dark" src="https://codepen.io/julianbattaglino/embed/ZEoZwNj?default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/julianbattaglino/pen/ZEoZwNj">
+                            masOS Window Dark</a> by julianbattaglino (<a href="https://codepen.io/julianbattaglino">@julianbattaglino</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                    </iframe>
                 </div>
 
                 <div className="col">
@@ -53,6 +62,11 @@ const Cards = () => {
                             </div>
                         </div>
                     </div>
+                    <iframe scrolling="no" title="Ubuntu Terminal CSS" src="https://codepen.io/julianbattaglino/embed/qBYwvLN?default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/julianbattaglino/pen/qBYwvLN">
+                            Ubuntu Terminal CSS</a> by julianbattaglino (<a href="https://codepen.io/julianbattaglino">@julianbattaglino</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                    </iframe>
                 </div>
 
             </div>

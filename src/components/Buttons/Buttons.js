@@ -4,7 +4,7 @@ import '../../assets/css/stackoverflow-dark.css';
 
 const Buttons = () => {
     return (
-        <div className="grid-container background-grey">
+        <div className="grid-container background-grey pt-80">
 
             <div className='col'>
                 <div className='btn-container'>
