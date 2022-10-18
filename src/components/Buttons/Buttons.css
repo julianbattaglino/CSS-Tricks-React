@@ -1,0 +1,364 @@
+/* Show More Button */
+.btn-container {
+    padding: 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.btn-base {
+    color: #2f2f2f;
+    background-color: transparent;
+    background-image: none;
+    padding: 1rem 1.6rem;
+    font-family: "SF Pro Text Regular";
+    font-weight: 700;
+    border-radius: 25px;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    border: none;
+    display: inline-flex;
+    text-decoration: none !important;
+}
+
+.btn-base::before {
+    content: "";
+    border-radius: 9999px;
+    width: 56px;
+    height: 56px;
+    background: rgba(0, 35, 121, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+    z-index: -2;
+}
+
+.btn-base::after {
+    content: "";
+    border-radius: 9999px;
+    width: 56px;
+    height: 56px;
+    background: rgba(0, 35, 121, 0.1) !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-56px);
+    transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.btn-base:hover {
+    color: #2f2f2f;
+}
+
+.btn-base:hover::before {
+    width: 100%;
+}
+
+.btn-base:hover .btn-icon {
+    margin-left: 16px;
+}
+
+.btn-base:focus,
+.btn-base.focus {
+    color: #2f2f2f;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.btn-base:focus::before,
+.btn-base.focus::before {
+    width: 100%;
+}
+
+.btn-base:focus::after,
+.btn-base.focus::after {
+    width: 100%;
+    transform: translateX(0);
+}
+
+.btn-base:focus::after,
+.btn-base.focus::after {
+    width: 100%;
+    transform: translateX(0);
+}
+
+.btn-base:focus .btn-icon,
+.btn-base.focus .btn-icon {
+    margin-left: 16px;
+}
+
+.btn-icon {
+    margin-left: 8px;
+    transition: margin 0.3s ease-in-out;
+}
+
+.fancy-underline-animated {
+    background-color: transparent;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 0;
+    transition: padding .35s, top .35s;
+    position: relative;
+    top: 0;
+    background-image: none;
+}
+
+.button {
+    pointer-events: auto;
+    cursor: pointer;
+    background: #e7e7e7;
+    border: none;
+    padding: 1.5rem 3rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+}
+
+.button::before,
+.button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Neomorphism */
+.btn-neomorphism {
+    height: 50px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: "SF Pro Display Semibold" !important;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+
+    background: rgb(96, 9, 240);
+    background: linear-gradient(0deg, rgba(96, 9, 240, 1) 0%, rgba(129, 5, 240, 1) 100%);
+    border: none;
+}
+
+.btn-neomorphism:before {
+    height: 0%;
+    width: 2px;
+}
+
+.btn-neomorphism:hover {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+        -4px -4px 6px 0 rgba(116, 125, 136, .5),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+/****** Button Progress ******/
+.button--circle {
+    background: none;
+    padding: 0;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    width: 120px;
+    height: 120px;
+    font-family: "SF Pro Display Semibold" !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.progress {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.button--circle:hover .progress {
+    transform: scale3d(1.2, 1.2, 1);
+}
+
+.progress__circle,
+.progress__path {
+    fill: none;
+    stroke: #dddddd;
+    stroke-width: 1px;
+}
+
+.button--circle:focus-visible .progress__circle {
+    fill: rgba(252, 196, 63, 0.4);
+}
+
+.progress__path {
+    stroke: #a6a6a6;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.button--circle:hover .progress__path {
+    stroke-dashoffset: 0;
+}
+
+/****** Button Resize ******/
+.button--resize {
+    background: none;
+    padding: 1.5rem 3rem;
+    font-family: "SF Pro Display Semibold" !important;
+}
+
+.button--resize span {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+}
+
+.button--resize::before {
+    content: '';
+    background: #000;
+    transition: transform 0.3s cubic-bezier(0.2, 1, 0.7, 1);
+}
+
+.button--resize:hover::before {
+    transform: scale3d(0.9, 0.8, 1);
+}
+
+.button--resize::after {
+    content: '';
+    border: 1px solid #000;
+    transition: transform 0.3s cubic-bezier(0.2, 1, 0.7, 1);
+    border-radius: 0px;
+    transform: scale3d(0.85, 0.65, 1);
+}
+
+.button--resize:hover::after {
+    transform: scale3d(1, 1, 1);
+}
+
+/****** Button Stars ******/
+.button--stars {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid;
+    background: none;
+    font-family: "SF Pro Display Semibold" !important;
+}
+
+.button--stars:hover {
+    background: none;
+}
+
+.button--stars::before {
+    animation: rotateIt 10s linear infinite;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAUElEQVQoU3VPSQ4AMQiS/z/aBiMNNDNeXEBQoDL66dkG52/hzlmsSqMKrAVCoOXuxR3TFVSIIJmzsFvGOMlust3iivmQd/6+3/NlN4paIOEADPIUD/MQvy0AAAAASUVORK5CYII=);
+    content: '';
+    width: 300%;
+    height: 300%;
+    top: -100%;
+    left: -100%;
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transition: opacity 0.3s;
+}
+
+@keyframes rotateIt {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.button--stars:hover::before {
+    opacity: 0.5;
+}
+
+.button--stars span {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+/****** Button Shape ******/
+.button--shape {
+    font-family: "SF Pro Display Semibold" !important;
+	width: 175px;
+	height: 120px;
+	color: #fff;
+	background: none;
+    z-index: 10;
+}
+
+.button--shape::before {
+	content: '';
+	background: #e6e6e6;
+	-webkit-clip-path: path("M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z");
+	clip-path: path("M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z");
+	transition: clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55), -webkit-clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55), background 0.5s ease;
+}
+
+.button--shape:hover::before {
+	background: #000;
+	-webkit-clip-path: path("M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z");
+	clip-path: path("M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z");
+}
+
+.button--shape::after {
+	content: '';
+	height: 86%;
+	width: 97%;
+	top: 5%;
+	border-radius: 58% 42% 55% 45% / 56% 45% 55% 44%;
+	border: 1px solid #000;
+	transform: rotate(-20deg);
+	z-index: -1;
+	transition: transform 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55);
+}
+
+.button--shape:hover::after {
+	transform: translate3d(0,-5px,0);
+}
+
+.button--shape span {
+	display: block;
+	transition: transform 0.3s ease;
+	mix-blend-mode: difference;
+}
+
+.button--shape:hover span {
+	transform: translate3d(0,-10px,0);
+}
+
+/****** Button Out ******/
+.button--out {
+    font-family: "SF Pro Display Semibold" !important;
+	background: #000;
+	padding: 0;
+	border-radius: 5px;
+}
+
+.button--out span {
+	display: block;
+	background: #a7a7a7;
+	padding: 1.5rem 2rem;
+	border: 1px solid #000;
+	border-radius: 5px;
+	transform: translate3d(-4px, -4px, 0);
+	transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.button--out:hover span {
+	transform: translate3d(-8px, -8px, 0);
+}

@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+/****** masOS Windows ******/
+.main {
+  background: #ffffff;
+  opacity: 0.9;
+  width: 100%;
+  border-radius: 10px;
+  border-top: none !important;
+  border: 0.5px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-bar {
+  padding: 10px;
+  background: #FFFFFF;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.15), inset 0px -0.5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.top-bar-dark {
+  padding: 10px;
+  background: #101010;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.15), inset 0px -0.5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #f9f9f9;
+  border-radius: 50%;
+  margin: 0 4px 0 0;
+}
+
+.red {
+  background: #FF6057;
+  border: 1px solid #E14640;
+}
+
+.amber {
+  background: #FFBD2E;
+  border: 1px solid #DFA123;
+}
+
+.green {
+  background: #27C93F;
+  border: 1px solid #1DAD2B;
+}
+
+.window {
+  background-color: #F6F6F6;
+  height: 400px;
+  border-radius: 0 0 10px 10px;
+}
+
+.window-dark {
+  background-color: #1A1A1A;
+  height: 400px;
+  border-radius: 0 0 10px 10px;
+}
+
+.content {
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+h2 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+
+/****** Ubuntu Terminal ******/
+.terminal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.terminal {
+  width: 100%;
+  box-shadow: 2px 4px 10px rgba(0,0,0,.5);
+}
+
+.terminal__toolbar {
+  background: linear-gradient(#504b45 0%,#3c3b37 100%);
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.toolbar__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar__button {
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 0;
+  font-size: 7px;
+  background: linear-gradient(#7d7871 0%, #595953 100%);
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.2);
+  box-shadow: 0px 0px 1px 0px #41403A,0px 1px 1px 0px #474642;
+  border: none;
+  margin-right: 4px;
+
+}
+.toolbar__button:hover {
+  cursor: pointer;
+}
+.toolbar__button--exit {
+  background: #f25d2b;
+  background: linear-gradient(#f37458 0%, #de4c12 100%);
+  background-clip: padding-box;
+}
+.toolbar__button:focus {
+  outline: none;
+}
+
+.toolbar__user {
+  color: #d5d0ce;
+  margin-left: 4px;
+  font-size: 12px;
+  line-height: 14px;
+}
+.terminal__body {
+  background: rgba(56, 4, 40, .9);
+  height: calc(100% - 25px);
+  margin-top: -1px;
+  padding: 10px;
+  font-family: 'Ubuntu mono';
+  height: 400px;
+}
+.terminal__text {
+  color: #ddd;
+}
+
+.terminal__prompt {
+  margin-top: 10px;
+  display: flex;
+}
+
+.prompt__user {
+  color: #87d441;
+}
+.prompt__location {
+  color: #6d85a9;
+}
+.prompt__dollar {
+  color: #ddd;
+}
+.prompt__cursor {
+  height: 17px;
+  width: 8px;
+  background: white;
+  display: block;
+  margin-left: 8px;
+  animation: 1000ms ease infinite alternate blink;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .terminal {
+    max-height: 90%;
+    width: 95%;
+  }
+}

@@ -1,0 +1,42 @@
+.intro-container {
+        padding-bottom: 40px;
+}
+
+.components-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 50px 25px;
+        gap: 15px;
+}
+
+h1.main-title {
+        font-family: "SF Pro Display Semibold";
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: -1px !important;
+        color: #1d1d1f;
+        text-align: center;
+        margin-block-start: 0 !important;
+        margin-block-end: 0 !important;
+}
+
+
+@media (max-width: 991.98px) {
+        .components-grid {
+                grid-template-columns: 1fr;
+        }
+}
+
+@media (min-width: 991.98px) and (max-width: 1200px){
+        .components-grid {
+                grid-template-columns: repeat(2, 1fr);
+        }
+}
+
+@media (min-width: 1200px) and (max-width: 1600px){
+        .components-grid {
+                grid-template-columns: repeat(3, 1fr);
+        }
+}
+
+

@@ -1,0 +1,13 @@
+.header {
+    padding: 15px 0;
+    position: fixed;
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: rgba(255,255,255,0.72);
+    width: 100%;
+    z-index: 999999 !important;
+}
+
+.navigation {
+    display: flex;
+    font-family: "SF Pro Display Semibold";
+}

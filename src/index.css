@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "SF Pro Display Light";
+  src: url("./assets/fonts/SF-Pro/sf-pro-display_light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "SF Pro Display Regular";
+  src: url("./assets/fonts/SF-Pro/sf-pro-text_regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "SF Pro Display Semibold";
+  src: url("./assets/fonts/SF-Pro/sf-pro-text_semibold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SF Pro Text Regular";
+  src: url("./assets/fonts/SF-Pro/sf-pro-text_regular.woff2") format("woff2");
+}
+
+body {
+  margin: 0 !important;
+}
+
+li {
+  list-style: none;
+  padding: 0 15px;
+}
+
+h2 {
+  font-family: "SF Pro Display Semibold";
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -1px !important;
+  color: #1d1d1f;
+  text-align: center;
+  margin-block-start: 15px !important;
+  margin-block-end: 15px !important;
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 5px; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: grey }
+
+
+div.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));  
+  padding: 50px 25px;
+  gap: 15px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.col {
+  border: solid 3px rgb(215, 215, 215);
+  padding: 15px;
+  border-radius: 5px;
+
+}
+
+.background-black {
+  background-color: #1d1d1f;
+}
+
+.background-grey {
+  background-color: rgb(250,250,250);
+}
+
+@media (max-width: 1200px){
+  code {
+    overflow: auto !important;
+  }
+}
+
+
+
